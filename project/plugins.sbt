@@ -21,6 +21,7 @@ addSbtPlugin("com.lightbend.sbt" % "sbt-javaagent" % "0.1.5") // ALPN agent
 // Testing
 //addSbtPlugin("io.spray" % "sbt-revolver" % "0.9.1")
 addSbtPlugin("com.typesafe.sbt" % "sbt-multi-jvm" % "0.4.0")
+addSbtPlugin("io.gatling" % "gatling-sbt" % "3.1.0")
 
 // Package and distribution
 addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.6.0")

@@ -138,6 +138,16 @@ lazy val core = (project in file("core"))
   )
   .dependsOn(protobufApi, grpcClientScala % "test->compile")
 
+lazy val performance = (project in file("performance"))
+  .enablePlugins(GatlingPlugin)
+  .settings(
+    libraryDependencies ++= Seq(
+      "io.gatling.highcharts" % "gatling-charts-highcharts" % "3.3.1" % Test,
+      "io.gatling" % "gatling-test-framework" % "3.3.1" % Test
+    )
+  )
+  .dependsOn(grpcClientScala)
+
 lazy val loadOSM = (project in file("load_osm"))
   .enablePlugins(JavaAppPackaging)
   .settings(
